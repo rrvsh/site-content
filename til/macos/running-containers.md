@@ -1,4 +1,6 @@
-# Running Containers
+WIP
+
+# How do containers work?
 
 The typical flow to run containers on MacOS is to install `colima` and the `docker` CLI.
 
