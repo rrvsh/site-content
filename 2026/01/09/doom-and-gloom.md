@@ -1,3 +1,7 @@
+---
+slug: doom-and-gloom
+tags: [daily-blog]
+---
 # Doom and Gloom
 
 *Written on Friday, 9th January 2026*

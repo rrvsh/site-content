@@ -1,3 +1,7 @@
+---
+slug: flaky-obs-screencap-macos
+tags: [til, macos]
+---
 # How to Fix Flaky macOS Screen Capture on OBS
 
 On macOS, when switching scenes in OBS, if you move from a scene with a Display Capture source to one without it, macOS stops the screen capture session. When you switch back, the display stays frozen until you re-enable it in the source properties.

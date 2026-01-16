@@ -1,3 +1,7 @@
+---
+slug: four-games-in-a-week
+tags: [daily-blog]
+---
 # Four Games in a Week
 
 We were supposed to play the first session of our new campaign today, but unfortunately one of my players fell sick (must be something going around - the rest of us are still feeling the aftershocks from earlier this week).

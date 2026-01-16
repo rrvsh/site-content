@@ -1,3 +1,7 @@
+---
+slug: new-monitor
+tags: [daily-blog]
+---
 # New Monitor!
 
 *Written on Thursday, 8th January 2026*

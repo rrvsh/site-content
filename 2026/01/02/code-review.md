@@ -1,3 +1,7 @@
+---
+slug: code-review
+tags: [essays]
+---
 # Code Review
 
 ## What code review is

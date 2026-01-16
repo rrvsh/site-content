@@ -1,6 +1,8 @@
+---
+slug: bendy-1-review
+tags: [daily-blog]
+---
 # Bendy and the Ink Machine - 9/10
-
-*Written on Tuesday, 6th January 2026*
 
 As is our occasional tradition, me and my roommates bought both the Bendy games during the Steam winter sale and scheduled a play session for today. For context, when Secret of the Mimic came out last year, we bought it on launch and played through the game in one sitting, passing the controller to the next person every time we died. We did the same with Bendy and the Ink Machine (2018) today, and as always, it was a blast.
 

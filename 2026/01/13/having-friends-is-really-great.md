@@ -1,3 +1,7 @@
+---
+slug: i-love-my-friends
+tags: [daily-blog]
+---
 # Having Friends is Really Great TM
 
 I don't really know what to write about today so I'll just list what I did - I planned out and started on the email verification functionality for work, set up AWS and OpenTofu with an S3 backend for `rrv.sh`, and played Prey for the first time up until seeing the full video (if you know what that means).

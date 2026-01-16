@@ -1,3 +1,7 @@
+---
+slug: firefox-conform-fullscreen
+tags: [til, firefox]
+---
 # Make Firefox's fullscreen conform to the window size instead of screen size
 
 Go to `about:config` and search for `full-screen-api.ignore-widgets`. Set the value to `true`.

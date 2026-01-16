@@ -1,3 +1,7 @@
+---
+slug: bendy-2-review
+tags: [daily-blog]
+---
 # Bendy and the Ink Machine - 9.5/10
 
 *Written on Wednesday, 7th January 2026*

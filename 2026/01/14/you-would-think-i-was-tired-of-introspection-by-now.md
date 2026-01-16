@@ -1,3 +1,7 @@
+---
+slug: introspection-again
+tags: [daily-blog]
+---
 # You would think I was tired of introspection by now
 
 I'm usually pretty hard on myself - I'm actually pretty proud of how I've generally conducted myself over the years, and there's nothing I outright regret doing, because I generally have always *tried* to do the right thing. I won't go into whether the outcome of these was ultimately good or if I would change things, but what I want to talk (or write) about is how I often punish myself mentally for not being what I considered good enough.
