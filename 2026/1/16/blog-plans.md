@@ -1,5 +1,5 @@
 ---
-slug: 
+slug: blog-plans
 tags: [daily-blog]
 ---
 # Plan for the site
