@@ -1,0 +1,17 @@
+name: Trigger site redeploy on content update
+
+on: push
+
+jobs:
+  dispatch-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger rrvsh/tools dispatch
+        run: |
+          curl -L \
+            -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.TOOLS_DISPATCH_PAT }}" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/repos/rrvsh/tools/dispatches \
+            -d '{"event_type":"site-content-update"}'
