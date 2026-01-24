@@ -1,12 +1,14 @@
 ---
+title: Failure
 slug: failure
+date: 2026-01-10
 tags: [daily-blog]
 ---
-# Failure
 
 So I had a grand vision to set up all the needed infrastructure for my website today, learning GCP and Terraform (technically OpenTofu) along the way - that failed, because after 14 hours of trials and tribulations, it still refuses to work.
 
 Successes despite the above:
+
 - Initialised the Rust crate
 - Built it as an OCI container with Nix
 - Set up the base OpenTofu stuff
@@ -21,6 +23,7 @@ The typical flow to run containers on MacOS is to install `colima` and the `dock
 Docker Engine provides the Docker API via `dockerd` and manages container lifecycles with `containerd`.
 
 `dockerd` delegates to `containerd` to:
+
 - Manage container state (created, running, stopped)
 - Pull container images
 - Unpack the images into a root filesystem snapshot

@@ -1,10 +1,9 @@
 ---
+title: Code Review
 slug: code-review
+date: 2026-01-02
 tags: [essays]
 ---
-# Code Review
-
-## What code review is
 
 Code review is a collaborative process where engineers propose changes to the codebase and others evaluate those changes with one primary goal: improving the long-term health of the system. It is not a final exam, a gatekeeping ritual, or a search for perfection. Every pull request should aim to leave the codebase in a better state than before.
 
@@ -92,5 +91,5 @@ Minimise delays between review rounds to avoid repeated effort and lost context.
 
 ## References
 
-https://google.github.io/eng-practices/
-https://mtlynch.io/code-review-love/
+<https://google.github.io/eng-practices/>
+<https://mtlynch.io/code-review-love/>

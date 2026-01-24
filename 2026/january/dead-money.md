@@ -1,8 +1,9 @@
 ---
+title: Returning to the Sierra Madre
 slug: dead-money
+date: 2026-01-17
 tags: [daily-blog]
 ---
-# Returning to the Sierra Madre
 
 Fallout New Vegas still contains some of my favourite stories in media. Today I was lucky enough to see my roommate play through the Dead Money DLC, and although (as anyone who played it will tell you) it was a huge slog, the characters and plotline, as well as the stellar atmosphere Obsidian was able to deliver with the time and resources they had, were still some of the best I've seen not only in gaming but in general.
 

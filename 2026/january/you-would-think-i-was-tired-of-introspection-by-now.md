@@ -1,8 +1,9 @@
 ---
+title: You would think I was tired of introspection by now
 slug: introspection-again
+date: 2026-01-14
 tags: [daily-blog]
 ---
-# You would think I was tired of introspection by now
 
 I'm usually pretty hard on myself - I'm actually pretty proud of how I've generally conducted myself over the years, and there's nothing I outright regret doing, because I generally have always *tried* to do the right thing. I won't go into whether the outcome of these was ultimately good or if I would change things, but what I want to talk (or write) about is how I often punish myself mentally for not being what I considered good enough.
 
@@ -12,6 +13,6 @@ It's weird - I can relate this to how I was when I was in my late teens. I was c
 
 I still have that fear inside me though. I think writing these out has helped externalise these thoughts that I've been having for probably 13 years at this point. I might even go to therapy about it. Regardless, I think of note is the fact that this has significantly decreased in the last few weeks, as I mentioned. I set goals for myself that were tiny and very achievable, and made sure to not only make sure I met them every day, but also didn't beat myself up when I didn't.
 
-Full credit to neuroscientist Anne-Laure Le Cunff here for her book Tiny Experiments - I have never read it, but its influence has spread enough that intermediary writers have beamed the concept of treating your life as a series of experiments into my brain. I have unconsciously shifted to viewing myself as a test subject, but also a researcher, at the start of this year, and it has been transformative for my self-confidence. If I fail at something, well that means the hypothesis, methodology, or conditions were to blame - NOT me. It just means we go again. I think that's why I like saying I'll see you tomorrow - that's my hypothesis, and I'll try damn well to prove it. If I can't? Well, we didn't get here as a society by succeeding - we did it by failing, and trying again. 
+Full credit to neuroscientist Anne-Laure Le Cunff here for her book Tiny Experiments - I have never read it, but its influence has spread enough that intermediary writers have beamed the concept of treating your life as a series of experiments into my brain. I have unconsciously shifted to viewing myself as a test subject, but also a researcher, at the start of this year, and it has been transformative for my self-confidence. If I fail at something, well that means the hypothesis, methodology, or conditions were to blame - NOT me. It just means we go again. I think that's why I like saying I'll see you tomorrow - that's my hypothesis, and I'll try damn well to prove it. If I can't? Well, we didn't get here as a society by succeeding - we did it by failing, and trying again.
 
 That's not to say I won't see you tomorrow though, because I will :)

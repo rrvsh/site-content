@@ -1,10 +1,9 @@
 ---
+title: Bendy and the Ink Machine - 9.5/10
 slug: bendy-2-review
+date: 2026-01-07
 tags: [daily-blog]
 ---
-# Bendy and the Ink Machine - 9.5/10
-
-*Written on Wednesday, 7th January 2026*
 
 So we were supposed to play this next week, but a virus spread around the house and we were all invalids for the day. Loving the previous game too much, we decided to get it out of the way, mainly so we could start engaging with the community content for it without fear of spoilers.
 

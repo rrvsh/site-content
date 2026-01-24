@@ -4,6 +4,7 @@ slug: life-overview
 date: 2026-01-21
 tags: [daily-blog, projects]
 ---
+
 In this article, I will attempt to enumerate the various projects I have done in my life and their statuses as of today.
 
 This is as much a reflection on my past work as it is a showcase - I am doing this from memory, and will likely not return to update this in the future.

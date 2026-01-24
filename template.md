@@ -1,6 +1,6 @@
 ---
-title: 
-slug: 
-date: 
+title:
+slug:
+date:
 tags: []
 ---
