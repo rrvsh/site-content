@@ -88,7 +88,7 @@ const handleFileEvent = (event: vscode.Uri, action: string) => {
   const file_path = event.fsPath;
   const relative_file_path = path.relative(
     vscode.workspace.workspaceFolders[0].uri.fsPath,
-    file_path
+    file_path,
   );
   // This handles the .gitignore exclusions; it will be explained in the next section.
   if (!ig.ignores(relative_file_path)) {
@@ -98,7 +98,7 @@ const handleFileEvent = (event: vscode.Uri, action: string) => {
     const terminal = vscode.window.createTerminal("Git LiveSync");
     terminal.sendText(`cd ${vscode.workspace.workspaceFolders[0].uri.fsPath}`);
     terminal.sendText(
-      `git pull && git add . && git commit -m "${commit_message}" && git push`
+      `git pull && git add . && git commit -m "${commit_message}" && git push`,
     );
   }
 };
@@ -111,7 +111,7 @@ import ignore from "ignore";
 // We first retrieve the .gitignore...
 const gitignorePath = path.join(
   vscode.workspace.workspaceFolders[0].uri.fsPath,
-  ".gitignore"
+  ".gitignore",
 );
 // then extract the exclusion patterns from it.
 let git_ignore_patterns: string[] = [];

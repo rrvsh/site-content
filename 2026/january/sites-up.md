@@ -4,6 +4,7 @@ slug: sites-up
 date: 2026-01-25
 tags: [daily-blog]
 ---
+
 After roughly two weeks of work, I finally have the working skeleton of my website (the one you're reading right now!).
 
 To briefly cover the architecture, I have a [content repository](https://github.com/rrvsh/site-content) of markdown files and [app repository](https://github.com/rrvsh/tools) (under `rs/site`).

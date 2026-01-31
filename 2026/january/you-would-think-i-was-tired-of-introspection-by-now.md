@@ -5,7 +5,7 @@ date: 2026-01-14
 tags: [daily-blog]
 ---
 
-I'm usually pretty hard on myself - I'm actually pretty proud of how I've generally conducted myself over the years, and there's nothing I outright regret doing, because I generally have always *tried* to do the right thing. I won't go into whether the outcome of these was ultimately good or if I would change things, but what I want to talk (or write) about is how I often punish myself mentally for not being what I considered good enough.
+I'm usually pretty hard on myself - I'm actually pretty proud of how I've generally conducted myself over the years, and there's nothing I outright regret doing, because I generally have always _tried_ to do the right thing. I won't go into whether the outcome of these was ultimately good or if I would change things, but what I want to talk (or write) about is how I often punish myself mentally for not being what I considered good enough.
 
 I never really congratulate or pride myself on the work I've done or what I accomplish. It may be the gifted kid syndrome again, but I think it's more of knowing I definitely could have done more - even this past week, I've been lazy countless times, preferring to defer work I know I need to do to a later time. The point here is related to what I wrote about yesterday, though - I haven't really felt like it was a failure in the last few weeks.
 

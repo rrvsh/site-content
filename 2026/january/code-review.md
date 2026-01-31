@@ -21,11 +21,11 @@ Confusion during review is a signal, not a failure. If a reviewer struggles to u
 
 ## Core principles
 
-* The goal of every review is to improve overall code health, even if only slightly.
-* Readability and clarity matter more than cleverness or abstraction.
-* Complexity is a cost; code that cannot be understood quickly is usually too complex.
-* Progress beats perfection. Small, consistent improvements compound.
-* Reviewer time is valuable and should be actively protected.
+- The goal of every review is to improve overall code health, even if only slightly.
+- Readability and clarity matter more than cleverness or abstraction.
+- Complexity is a cost; code that cannot be understood quickly is usually too complex.
+- Progress beats perfection. Small, consistent improvements compound.
+- Reviewer time is valuable and should be actively protected.
 
 ## Guidelines for authors
 
@@ -65,7 +65,7 @@ Use “nit” comments for low-priority suggestions that should not block progre
 
 ### Give clear, principled feedback
 
-Explain *why* you are giving feedback, not just *what* should change. Tie comments to shared engineering principles rather than personal preference.
+Explain _why_ you are giving feedback, not just _what_ should change. Tie comments to shared engineering principles rather than personal preference.
 
 Use neutral, collaborative language (“we” or passive voice) and support feedback with examples or suggested code when helpful. Acknowledge good decisions and clear thinking—positive feedback reinforces good habits.
 

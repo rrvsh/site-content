@@ -4,6 +4,7 @@ slug: ssh-dir-perms
 date: 2026-01-29
 tags: [til]
 ---
+
 The `~/.ssh` folder needs `700` and `~/.ssh/id_*` (the private key) needs `600`.
 
 You can accomplish this with:
