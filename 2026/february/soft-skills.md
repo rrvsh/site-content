@@ -22,13 +22,13 @@ I've found a [local meetup](https://www.meetup.com/junior-developers-singapore/e
 I'm already a `nixpkgs` and `home-manger` maintainer and have contributed to a few Nix projects (and a small contribution to Hyprland), but it's only been for select software that I wanted to improve for myself. I want to make this more regular and build my name more, and make some connections in the community. I am planning to engage in [Open Source Fridays](https://opensourcefriday.com/), setting aside two hours on Fridays to pick an issue and work on it, preferably in Rust to keep up my skills there and expose myself to production Rust code.
 
 ### Finding issues to contribute to
-- https://firstcontributions.github.io/
-- https://goodfirstissues.com/
-- https://goodfirstissue.dev/
-- https://up-for-grabs.net/#/
-- https://www.codetriage.com/
-- https://forgoodfirstissue.github.com/
-- https://github.com/showcases/great-for-new-contributors
+- <https://firstcontributions.github.io/>
+- <https://goodfirstissues.com/>
+- <https://goodfirstissue.dev/>
+- <https://up-for-grabs.net/#/>
+- <https://www.codetriage.com/>
+- <https://forgoodfirstissue.github.com/>
+- <https://github.com/showcases/great-for-new-contributors>
 
 ## Building a persona
 
@@ -46,6 +46,6 @@ Lastly, include credits and acknowledgement, and a license. Optionally, include 
 That's all for today! See you tomorrow.
 
 ## References
-- https://opensourcefriday.com/
-- https://www.firsttimersonly.com/
-- https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/
+- <https://opensourcefriday.com/>
+- <https://www.firsttimersonly.com/>
+- <https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/>
