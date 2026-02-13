@@ -20,8 +20,8 @@ struct Frontmatter {
 
 fn main() -> Result<(), Box<dyn Error>> {
     let mut args = env::args().skip(1).collect::<Vec<String>>();
-    let allow_push = args.iter().any(|arg| arg == "--no-dry-run");
-    args.retain(|arg| arg != "--no-dry-run");
+    let allow_push = args.iter().any(|arg| arg == "--push");
+    args.retain(|arg| arg != "--push");
 
     if args.first().map(|arg| arg.as_str()) == Some("--finalize") {
         args.remove(0);
@@ -70,7 +70,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let mut command = Command::new(exe);
     command.arg("--finalize").arg(path).arg(&date);
     if allow_push {
-        command.arg("--no-dry-run");
+        command.arg("--push");
     }
     command.spawn()?;
 
