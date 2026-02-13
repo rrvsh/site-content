@@ -20,6 +20,8 @@ struct Frontmatter {
 
 fn main() -> Result<(), Box<dyn Error>> {
     let mut args = env::args().skip(1).collect::<Vec<String>>();
+    let allow_push = args.iter().any(|arg| arg == "--no-dry-run");
+    args.retain(|arg| arg != "--no-dry-run");
 
     if args.first().map(|arg| arg.as_str()) == Some("--finalize") {
         args.remove(0);
@@ -28,7 +30,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         let path = Path::new(path);
         println!("Generating frontmatter (if needed) and preparing git commit...");
         ensure_frontmatter(path, date)?;
-        commit_and_push(path, date)?;
+        commit_and_push(path, date, allow_push)?;
         return Ok(());
     }
 
@@ -67,6 +69,9 @@ fn main() -> Result<(), Box<dyn Error>> {
     let exe = env::current_exe()?;
     let mut command = Command::new(exe);
     command.arg("--finalize").arg(path).arg(&date);
+    if allow_push {
+        command.arg("--no-dry-run");
+    }
     command.spawn()?;
 
     Ok(())
@@ -243,7 +248,7 @@ fn extract_text_response(stdout: &str) -> Result<String, Box<dyn Error>> {
     Ok(combined)
 }
 
-fn commit_and_push(path: &Path, date: &str) -> Result<(), Box<dyn Error>> {
+fn commit_and_push(path: &Path, date: &str, allow_push: bool) -> Result<(), Box<dyn Error>> {
     let status = Command::new("git").arg("add").arg(path).status()?;
     if !status.success() {
         return Err("git add failed".into());
@@ -258,9 +263,11 @@ fn commit_and_push(path: &Path, date: &str) -> Result<(), Box<dyn Error>> {
         return Err("git commit failed".into());
     }
 
-    let status = Command::new("git").arg("push").status()?;
-    if !status.success() {
-        return Err("git push failed".into());
+    if allow_push {
+        let status = Command::new("git").arg("push").status()?;
+        if !status.success() {
+            return Err("git push failed".into());
+        }
     }
 
     Ok(())
