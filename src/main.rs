@@ -1,6 +1,7 @@
 use chrono::Local;
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
+use std::env;
 use std::error::Error;
 use std::fs;
 use std::path::{Path, PathBuf};
@@ -18,6 +19,19 @@ struct Frontmatter {
 }
 
 fn main() -> Result<(), Box<dyn Error>> {
+    let mut args = env::args().skip(1).collect::<Vec<String>>();
+
+    if args.first().map(|arg| arg.as_str()) == Some("--finalize") {
+        args.remove(0);
+        let path = args.get(0).ok_or("missing path")?;
+        let date = args.get(1).ok_or("missing date")?;
+        let path = Path::new(path);
+        println!("Generating frontmatter (if needed) and preparing git commit...");
+        ensure_frontmatter(path, date)?;
+        commit_and_push(path, date)?;
+        return Ok(());
+    }
+
     let today = Local::now().date_naive();
     let date = today.format("%Y-%m-%d").to_string();
     let year = today.format("%Y").to_string();
@@ -49,8 +63,11 @@ fn main() -> Result<(), Box<dyn Error>> {
         return Err("nvim exited with a non-zero status".into());
     }
 
-    ensure_frontmatter(path, &date)?;
-    commit_and_push(path, &date)?;
+    println!("Editor closed. Backgrounding frontmatter generation and git commit...");
+    let exe = env::current_exe()?;
+    let mut command = Command::new(exe);
+    command.arg("--finalize").arg(path).arg(&date);
+    command.spawn()?;
 
     Ok(())
 }
