@@ -27,16 +27,18 @@ fn main() -> Result<(), Box<dyn Error>> {
         args.remove(0);
         let path = args.get(0).ok_or("missing path")?;
         let date = args.get(1).ok_or("missing date")?;
+        let commit_stamp = args.get(2).ok_or("missing commit stamp")?;
         let path = Path::new(path);
         println!("Generating frontmatter (if needed) and preparing git commit...");
         ensure_frontmatter(path, date)?;
-        commit_and_push(path, date, allow_push)?;
+        commit_and_push(path, commit_stamp, allow_push)?;
         return Ok(());
     }
 
     let now = Local::now();
     let today = now.date_naive();
     let date = today.format("%Y-%m-%d").to_string();
+    let commit_stamp = now.format("%Y-%m-%d %H:%M").to_string();
     let year = today.format("%Y").to_string();
     let month = today.format("%B").to_string().to_lowercase();
 
@@ -67,7 +69,11 @@ fn main() -> Result<(), Box<dyn Error>> {
     println!("Editor closed. Backgrounding frontmatter generation and git commit...");
     let exe = env::current_exe()?;
     let mut command = Command::new(exe);
-    command.arg("--finalize").arg(path).arg(&date);
+    command
+        .arg("--finalize")
+        .arg(path)
+        .arg(&date)
+        .arg(&commit_stamp);
     if allow_push {
         command.arg("--push");
     }
@@ -247,7 +253,11 @@ fn extract_text_response(stdout: &str) -> Result<String, Box<dyn Error>> {
     Ok(combined)
 }
 
-fn commit_and_push(path: &Path, date: &str, allow_push: bool) -> Result<(), Box<dyn Error>> {
+fn commit_and_push(
+    path: &Path,
+    commit_stamp: &str,
+    allow_push: bool,
+) -> Result<(), Box<dyn Error>> {
     let status = Command::new("git").arg("add").arg(path).status()?;
     if !status.success() {
         return Err("git add failed".into());
@@ -256,7 +266,7 @@ fn commit_and_push(path: &Path, date: &str, allow_push: bool) -> Result<(), Box<
     let status = Command::new("git")
         .arg("commit")
         .arg("-m")
-        .arg(date)
+        .arg(commit_stamp)
         .status()?;
     if !status.success() {
         return Err("git commit failed".into());
