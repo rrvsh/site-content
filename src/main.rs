@@ -34,15 +34,14 @@ fn main() -> Result<(), Box<dyn Error>> {
         return Ok(());
     }
 
-    let today = Local::now().date_naive();
+    let now = Local::now();
+    let today = now.date_naive();
     let date = today.format("%Y-%m-%d").to_string();
     let year = today.format("%Y").to_string();
     let month = today.format("%B").to_string().to_lowercase();
 
-    let relative_path = PathBuf::from(year)
-        .join(month)
-        .join(format!("{date}.md"));
-    let path = Path::new(&relative_path);
+    let relative_path = PathBuf::from(year).join(month);
+    let path = next_entry_path(&relative_path, &date)?;
 
     if let Some(parent) = path.parent() {
         fs::create_dir_all(parent)?;
@@ -271,4 +270,36 @@ fn commit_and_push(path: &Path, date: &str, allow_push: bool) -> Result<(), Box<
     }
 
     Ok(())
+}
+
+fn next_entry_path(base_dir: &Path, date: &str) -> Result<PathBuf, Box<dyn Error>> {
+    fs::create_dir_all(base_dir)?;
+
+    let mut max_index: Option<u32> = None;
+    for entry in fs::read_dir(base_dir)? {
+        let entry = entry?;
+        let path = entry.path();
+        if path.extension().and_then(|ext| ext.to_str()) != Some("md") {
+            continue;
+        }
+        let filename = match path.file_stem().and_then(|name| name.to_str()) {
+            Some(name) => name,
+            None => continue,
+        };
+        let Some(rest) = filename.strip_prefix(&format!("{date}-")) else {
+            continue;
+        };
+        if rest.len() != 2 || !rest.chars().all(|ch| ch.is_ascii_digit()) {
+            continue;
+        }
+        let index: u32 = rest.parse()?;
+        max_index = Some(max_index.map_or(index, |current| current.max(index)));
+    }
+
+    let next_index = max_index.map_or(0, |index| index + 1);
+    if next_index > 99 {
+        return Err("daily entry index exceeded 99".into());
+    }
+    let filename = format!("{date}-{next_index:02}.md");
+    Ok(base_dir.join(filename))
 }
