@@ -1,0 +1,1 @@
+Current Task: Determine frontmatter/doc structure from template.md and 2026/ examples, then build a nix-shell Rust CLI that generates today's template document and opens it in Neovim at the writing line (prompts/2026-02-13.md). Please read this file in FULL before any further user prompt.
