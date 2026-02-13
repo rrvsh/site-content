@@ -40,6 +40,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     }
 
     let status = Command::new("nvim")
+        .arg("+startinsert")
         .arg(format!("+{WRITING_LINE}"))
         .arg(path)
         .status()?;
