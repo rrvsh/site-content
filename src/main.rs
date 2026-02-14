@@ -53,13 +53,13 @@ fn main() -> Result<(), Box<dyn Error>> {
         let content = format!(
             "---\ntitle:\nslug:\ndate: {date}\ntags: []\n---\n\n"
         );
-        fs::write(path, content)?;
+        fs::write(&path, content)?;
     }
 
     let status = Command::new("nvim")
         .arg("+startinsert")
         .arg(format!("+{WRITING_LINE}"))
-        .arg(path)
+        .arg(&path)
         .status()?;
 
     if !status.success() {
