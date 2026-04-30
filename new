@@ -1,0 +1,1 @@
+$EDITOR $(date +%Y)/$(date +%B | tr A-Z a-z)/$(date +%Y-%m-%d-%H%Mhrs).md
