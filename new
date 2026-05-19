@@ -1,2 +1,3 @@
+mkdir -p $(date +%Y)/$(date +%B | tr A-Z a-z)
 cp template.md $(date +%Y)/$(date +%B | tr A-Z a-z)/$(date +%Y-%m-%d-%H%Mhrs).md
 $EDITOR $(date +%Y)/$(date +%B | tr A-Z a-z)/$(date +%Y-%m-%d-%H%Mhrs).md
