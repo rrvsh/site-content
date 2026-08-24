@@ -1,17 +1,23 @@
-name: Trigger site redeploy on content update
+name: Refresh site content
 
-on: push
+on:
+  push:
+    branches:
+      - prime
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
-  dispatch-deploy:
+  refresh-site:
     runs-on: ubuntu-latest
+    timeout-minutes: 2
     steps:
-      - name: Trigger rrvsh/tools dispatch
-        run: |
-          curl -L \
-            -X POST \
-            -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer ${{ secrets.TOOLS_DISPATCH_PAT }}" \
-            -H "X-GitHub-Api-Version: 2022-11-28" \
-            https://api.github.com/repos/rrvsh/tools/dispatches \
-            -d '{"event_type":"site-content-update"}'
+      - name: Check out the content
+        uses: actions/checkout@v4
+
+      - name: Sign and send the content revision
+        env:
+          SITE_REFRESH_PRIVATE_KEY: ${{ secrets.SITE_REFRESH_PRIVATE_KEY }}
+        run: scripts/refresh-site.sh "${{ github.sha }}"
